@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Duyệt Kế Hoạch & Đồng Bộ GitHub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- [TASK-03] Thiết kế giao diện Frontend trực quan -->
+    <header class="navbar">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">VibeCode DevSync</span>
+            </div>
+            <div class="badge-status">Hệ Thống Tự Động Hóa</div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Form thêm kế hoạch mới -->
+        <section class="card form-section">
+            <h2>📝 Tạo Kế Hoạch Mới</h2>
+            <form id="planForm">
+                <div class="form-group">
+                    <label for="title">Tên Kế Hoạch / Dự Án</label>
+                    <input type="text" id="title" placeholder="Ví dụ: Phát triển Module Thanh Toán" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="scenario">Kịch Bản Nghiệp Vụ (Scenario ID)</label>
+                        <input type="text" id="scenario" placeholder="Ví dụ: SC-01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="githubRepo">GitHub Repository URL</label>
+                        <input type="url" id="githubRepo" placeholder="https://github.com/user/repo" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tasks">Danh Sách Task (Phân tách bằng dấu phẩy)</label>
+                    <input type="text" id="tasks" placeholder="Ví dụ: [TASK-01] Thiết kế DB, [TASK-02] Viết API" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnSubmit">Tạo Kế Hoạch & Lưu Nháp</button>
+            </form>
+        </section>
+
+        <!-- Danh sách kế hoạch hiện có -->
+        <section class="list-section">
+            <div class="section-header">
+                <h2>📋 Danh Sách Kế Hoạch & Tiến Trình</h2>
+                <button id="btnRefresh" class="btn btn-secondary">🔄 Làm Mới</button>
+            </div>
+            <div id="plansContainer" class="plans-grid">
+                <div class="loading">Đang tải dữ liệu kế hoạch...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Vibecode Senior Full-Stack Developer. Bản quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>
+```
+
+---
